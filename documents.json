@@ -1,0 +1,245 @@
+﻿{
+  "Info": {
+    "Class": "clsDbDocument",
+    "Description": "Database Documents Properties (DAO)"
+  },
+  "Items": {
+    "Databases": {
+      "SummaryInfo": {
+        "Author": "John L. Viescas",
+        "Company": "Viescas Consulting, Inc.",
+        "Title": "Books 2B Upsized"
+      }
+    },
+    "Forms": {
+      "frmAbout": {
+        "Description": "Splash screen."
+      },
+      "frmAuthorAdd": {
+        "Description": "Form to add 1 Author"
+      },
+      "frmAuthorList": {
+        "Description": "Author selector list - from Authors button on main switchboard."
+      },
+      "frmAuthors": {
+        "Description": "Author edit/review form"
+      },
+      "frmAuthorSearch": {
+        "Description": "Custom Author Query By Form"
+      },
+      "frmAuthorSummary": {
+        "Description": "Authors continuous form when search result exceeds 10"
+      },
+      "frmBookList": {
+        "Description": "Book selector list - from Books button on main switchboard."
+      },
+      "frmBookPrintParms": {
+        "Description": "Book report options"
+      },
+      "frmBooks": {
+        "Description": "Book edit/review form"
+      },
+      "frmBookSalesParm": {
+        "Description": "Book sales report parameter form"
+      },
+      "frmBookSearch": {
+        "Description": "Custom Book Query By Form"
+      },
+      "frmBooksPlain": {
+        "Description": "Book edit/review form - not secured"
+      },
+      "frmBookSummary": {
+        "Description": "Books continuous form when search result exceeds 10"
+      },
+      "frmCategoryAdd": {
+        "Description": "Form to add a new category."
+      },
+      "frmCopyright": {
+        "Description": "OPEN THIS FORM to start the application."
+      },
+      "frmCustAdd": {
+        "Description": "Form to add 1 customer"
+      },
+      "frmCustomers": {
+        "Description": "Customer Edit/Review form"
+      },
+      "frmCustPrintParms": {
+        "Description": "Customer report options"
+      },
+      "frmCustSalesParm": {
+        "Description": "Customer sales report parameter form"
+      },
+      "frmCustSearch": {
+        "Description": "Customer Query By Form"
+      },
+      "frmMain": {
+        "Description": "Application main switchboard"
+      },
+      "frmOrderOptions": {
+        "Description": "Order selection/filter form"
+      },
+      "frmOrderPrintParms": {
+        "Description": "Order Print options"
+      },
+      "frmOrders": {
+        "Description": "Book order entry form"
+      },
+      "frmReports": {
+        "Description": "Reports switchboard"
+      },
+      "frmSignOn": {
+        "Description": "Signon form to identify current customer."
+      },
+      "frmStoreList": {
+        "Description": "Store selector list - from Stores button on main switchboard."
+      },
+      "frmStorePrintParms": {
+        "Description": "Store Report Options"
+      },
+      "frmStores": {
+        "Description": "Review stores read-only form."
+      },
+      "frmStoreSearch": {
+        "Description": "Custom Store Query By Form"
+      },
+      "frmStoreSummary": {
+        "Description": "Stores continuous form when search result exceeds 10"
+      },
+      "fsubAuthorBooks": {
+        "Description": "Book subform for frmAuthors"
+      },
+      "fsubBookAuthors": {
+        "Description": "Author subform for frmBooks"
+      },
+      "fsubBookAuthors2": {
+        "Description": "Demo Subform for frmBooksPlain"
+      },
+      "fsubBookCategories": {
+        "Description": "Categories subform for frmBooks"
+      },
+      "fsubBookCategories2": {
+        "Description": "Demo Subform for frmBooksPlain"
+      },
+      "fsubOrderBooks": {
+        "Description": "Order details subform for Orders"
+      },
+      "zfrmSellBooks": {
+        "Description": "Form to generate some sales data"
+      },
+      "zfrmTemplate": {
+        "Description": "A template form"
+      }
+    },
+    "Modules": {
+      "modBooks": {
+        "Description": "Common book order function here"
+      },
+      "modExamples": {
+        "Description": "Samples from Chapter 22"
+      },
+      "modMedian": {
+        "Description": "Median Domain function"
+      },
+      "modPublic": {
+        "Description": "Public variables"
+      },
+      "modUtility": {
+        "Description": "Some useful utility functions"
+      },
+      "zmodDumpTbl": {
+        "Description": "Sample code to dump out all tables and fields"
+      }
+    },
+    "Reports": {
+      "rptAuthors": {
+        "Description": "List of authors"
+      },
+      "rptBooks": {
+        "Description": "List of books"
+      },
+      "rptBookSales": {
+        "Description": "Sales by book report"
+      },
+      "rptCustEnvelope": {
+        "Description": "Customer #10 envelope"
+      },
+      "rptCustLabels": {
+        "Description": "Customer mailing labels"
+      },
+      "rptCustomers": {
+        "Description": "List of customers"
+      },
+      "rptCustSales": {
+        "Description": "Sales by customer report"
+      },
+      "rptOrders": {
+        "Description": "Book purchase order"
+      },
+      "rptStoreLabels": {
+        "Description": "Store mailing labels"
+      },
+      "rptStores": {
+        "Description": "List of stores"
+      },
+      "rsubAuthorBooks": {
+        "Description": "Subreport for rptAuthors"
+      },
+      "rsubBookAuthors": {
+        "Description": "Subreport for rptBooks"
+      },
+      "rsubBookCategories": {
+        "Description": "Subreport for rptBooks"
+      }
+    },
+    "Tables": {
+      "ErrTableSample": {
+        "Description": "Table created by the CreateErrTable function"
+      },
+      "tblAuthors": {
+        "Description": "Authors data table"
+      },
+      "tblBookAuthor": {
+        "Description": "Book and author linking table"
+      },
+      "tblBookCategories": {
+        "Description": "Book and Category linking table"
+      },
+      "tblBooks": {
+        "Description": "Books data table"
+      },
+      "tblCategories": {
+        "Description": "Categories data table"
+      },
+      "tblClasses": {
+        "Description": "Classes lookup table (for categories)"
+      },
+      "tblCustomers": {
+        "Description": "Customers data table"
+      },
+      "tblLocalValues": {
+        "Description": "Table for last signed on user & print preview preference"
+      },
+      "tblOrderDetails": {
+        "Description": "Orders and Books linking table"
+      },
+      "tblOrders": {
+        "Description": "Orders data table"
+      },
+      "tblStores": {
+        "Description": "Stores data table"
+      },
+      "tblUSStoresXmpl": {
+        "Description": "Stores load from text example"
+      },
+      "USStores": {
+        "Description": "Linked text file for store info import"
+      },
+      "zTableFields": {
+        "Description": "Table describing all tables and fields"
+      },
+      "ztblDiskValues": {
+        "Description": "Disk type lookup table (for books)"
+      }
+    }
+  }
+}

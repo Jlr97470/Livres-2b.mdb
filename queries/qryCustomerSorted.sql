@@ -1,0 +1,22 @@
+﻿SELECT
+  tblCustomers.CustomerID,
+  tblCustomers.LastName,
+  tblCustomers.FirstName,
+  tblCustomers.MiddleInit,
+  tblCustomers.Address,
+  tblCustomers.City,
+  tblCustomers.StateOrProvince,
+  tblCustomers.PostalCode,
+  tblCustomers.Country,
+  tblCustomers.PhoneNumber,
+  tblCustomers.EmailAddress,
+  tblCustomers.Password,
+  tblCustomers.PayBy,
+  tblCustomers.CCNumber,
+  tblCustomers.Admin
+FROM
+  tblCustomers
+ORDER BY
+  [tblCustomers].[LastName],
+  [tblCustomers].[FirstName],
+  [tblCustomers].[MiddleInit];

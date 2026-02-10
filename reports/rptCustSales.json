@@ -1,0 +1,28 @@
+﻿{
+  "Info": {
+    "Class": "clsDbReport",
+    "Description": "rptCustSales Print Settings"
+  },
+  "Items": {
+    "Printer": {
+      "Orientation": "Landscape",
+      "PaperSize": "Letter"
+    },
+    "Margins": {
+      "LeftMargin": 1,
+      "TopMargin": 1,
+      "RightMargin": 1,
+      "BotMargin": 1,
+      "DataOnly": false,
+      "Width": 9,
+      "Height": 0.25,
+      "DefaultSize": true,
+      "Columns": 1,
+      "ColumnSpacing": 0.25,
+      "RowSpacing": 0,
+      "ItemLayout": "Horizontal Columns",
+      "FastPrint": 1,
+      "Datasheet": 1
+    }
+  }
+}

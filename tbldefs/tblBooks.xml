@@ -1,0 +1,211 @@
+﻿<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tblBooks" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="generated" type="xsd:dateTime"></xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="tblBooks">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <od:index index-name="PrimaryKey" index-key="ISBNNumber " primary="yes" unique="yes" clustered="no" order="asc"></od:index>
+        <od:tableProperty name="OrderByOn" type="1" value="1"></od:tableProperty>
+        <od:tableProperty name="RowHeight" type="3" value="1110"></od:tableProperty>
+        <od:tableProperty name="Description" type="10" value="Books data table"></od:tableProperty>
+        <od:tableProperty name="Orientation" type="2" value="0"></od:tableProperty>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ISBNNumber" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="InputMask" type="10" value="0\-00000\-000\-A;0;_"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="ISBN Number"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="International Standard Book Number"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="13"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Title" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="3060"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Book title"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="75"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="CoverPix" minOccurs="0" od:jetType="oleobject" od:sqlSType="image">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1305"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Picture of the book cover"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Cover"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:base64Binary">
+              <xsd:maxLength value="1476395008"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="CopyrightYear" minOccurs="0" od:jetType="integer" od:sqlSType="smallint" type="xsd:short">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Copyright Year"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Copyright year"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SuggPrice" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="SRP"></od:fieldProperty>
+              <od:fieldProperty name="Format" type="10" value="$#,##0.00;($#,##0.00)"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="2"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Suggested retail price"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="EditionNumber" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Edition"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="810"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Edition number"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="OutOfPrint" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1215"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Is this book now out of print?"></od:fieldProperty>
+              <od:fieldProperty name="Format" type="10" value="Yes/No"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Out of print"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="No"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="106"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Pages" minOccurs="0" od:jetType="integer" od:sqlSType="smallint" type="xsd:short">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="735"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Number of pages in the book"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Disk" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Disk"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Type of disk included with the book (if any)"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="15"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="LinerNotes" minOccurs="0" od:jetType="memo" od:sqlSType="ntext">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="2040"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Liner Notes"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Book description"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="536870910"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="TOCDoc" minOccurs="0" od:jetType="hyperlink" od:sqlSType="ntext" od:hyperlink="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="2475"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Link to book table of contents document"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Link to TOC"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="536870910"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

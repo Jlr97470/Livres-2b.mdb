@@ -1,0 +1,24 @@
+﻿{
+  "Info": {
+    "Class": "clsDbVbeReference",
+    "Description": "VBE References"
+  },
+  "Items": {
+    "ADODB": {
+      "GUID": "{00000201-0000-0010-8000-00AA006D2EA4}",
+      "Version": "2.1"
+    },
+    "ADOX": {
+      "GUID": "{00000600-0000-0010-8000-00AA006D2EA4}",
+      "Version": "2.8"
+    },
+    "Office": {
+      "GUID": "{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}",
+      "Version": "2.8"
+    },
+    "stdole": {
+      "GUID": "{00020430-0000-0000-C000-000000000046}",
+      "Version": "2.0"
+    }
+  }
+}

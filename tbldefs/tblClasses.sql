@@ -1,0 +1,4 @@
+﻿CREATE TABLE [tblClasses] (
+  [ClassID] SHORT CONSTRAINT [PrimaryKey] PRIMARY KEY UNIQUE NOT NULL,
+  [ClassName] VARCHAR (50)
+)

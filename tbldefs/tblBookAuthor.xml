@@ -1,0 +1,93 @@
+﻿<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tblBookAuthor" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="generated" type="xsd:dateTime"></xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="tblBookAuthor">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <od:index index-name="AuthorID" index-key="AuthorID " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="PrimaryKey" index-key="ISBNNumber AuthorID " primary="yes" unique="yes" clustered="no" order="asc asc"></od:index>
+        <od:tableProperty name="OrderByOn" type="1" value="0"></od:tableProperty>
+        <od:tableProperty name="Description" type="10" value="Book and author linking table"></od:tableProperty>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ISBNNumber" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="International Standard Book Number"></od:fieldProperty>
+              <od:fieldProperty name="InputMask" type="10" value="0\-00000\-000\-0;0;_"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="ISBN Number"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="111"></od:fieldProperty>
+              <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"></od:fieldProperty>
+              <od:fieldProperty name="RowSource" type="12" value="qryBooksForCombo"></od:fieldProperty>
+              <od:fieldProperty name="BoundColumn" type="3" value="1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnCount" type="3" value="3"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHeads" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidths" type="10" value="1296;3744;360"></od:fieldProperty>
+              <od:fieldProperty name="ListRows" type="3" value="8"></od:fieldProperty>
+              <od:fieldProperty name="ListWidth" type="10" value="4"></od:fieldProperty>
+              <od:fieldProperty name="LimitToList" type="1" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="13"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="AuthorID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Author"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Author ID"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="111"></od:fieldProperty>
+              <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"></od:fieldProperty>
+              <od:fieldProperty name="RowSource" type="12" value="qryAuthForCombo"></od:fieldProperty>
+              <od:fieldProperty name="BoundColumn" type="3" value="1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnCount" type="3" value="2"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHeads" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidths" type="10" value="0;2160"></od:fieldProperty>
+              <od:fieldProperty name="ListRows" type="3" value="8"></od:fieldProperty>
+              <od:fieldProperty name="ListWidth" type="10" value="1.75"></od:fieldProperty>
+              <od:fieldProperty name="LimitToList" type="1" value="1"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SeqNo" minOccurs="0" od:jetType="integer" od:sqlSType="smallint" type="xsd:short">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Author sequence (multiple author books)"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Author Seq."></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

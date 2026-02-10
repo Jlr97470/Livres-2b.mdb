@@ -1,0 +1,399 @@
+﻿-------------------------------------
+Beginning Export of Source Files
+Livres 2b.mdb
+VCS Version 4.1.2
+Full Path: D:\MES_SOURCES\ACCESS\EXEMPLES\ACCESS 2000\LIVRES 2B\Livres 2b.mdb
+Export Folder: D:\MES_SOURCES\GITHUB\Livres 2b.mdb\
+Performing Full Export
+10/02/2026 10:30:58
+-------------------------------------
+Scanning source files...
+No db connections found in this database.
+No vbe forms found in this database.
+No saved specs found in this database.
+No shared images found in this database.
+No themes found in this database.
+No table data found in this database.
+No table data macros found in this database.
+-------------------------------------
+Exporting project...          
+  Livres 2b.mdb
+[1]
+-------------------------------------
+Exporting vb project...       
+  Books 2B Upsized
+[1]
+-------------------------------------
+Exporting vbe references...   
+  ADODB
+[4]
+-------------------------------------
+Exporting proj properties...  
+  Current Project Properties (Access)
+[1]
+-------------------------------------
+Exporting modules...          
+  zmodDumpTbl
+  modPublic
+  modUtility
+  modExamples
+  modMedian
+  modBooks
+  zmodMoveSize
+[7]
+-------------------------------------
+Exporting commandbars...      
+  Book Form Bar
+  Book Menu Bar
+
+-------------------------------------
+ERROR: Unhandled error, likely before `On Error` directive
+Source: .Unknown.LogUnhandledErrors
+-------------------------------------
+  Book Print Tools
+[3]
+-------------------------------------
+Exporting db properties...    
+  Database Properties (DAO)
+[46]
+-------------------------------------
+Exporting imex specs...       
+  USStores Link Specification
+[1]
+-------------------------------------
+Exporting tables...           
+  ErrTableSample
+    Sanitized in 0,002 seconds.
+  ErrTableSample (SQL)
+  tblAuthors
+    Sanitized in 0,002 seconds.
+  tblAuthors (SQL)
+  tblBookAuthor
+    Sanitized in 0,002 seconds.
+  tblBookAuthor (SQL)
+  tblBookCategories
+    Sanitized in 0,001 seconds.
+  tblBookCategories (SQL)
+  tblBooks
+    Sanitized in 0,002 seconds.
+  tblBooks (SQL)
+  tblCategories
+    Sanitized in 0,001 seconds.
+  tblCategories (SQL)
+  tblClasses
+    Sanitized in 0,001 seconds.
+  tblClasses (SQL)
+  tblCustomers
+    Sanitized in 0,003 seconds.
+  tblCustomers (SQL)
+  tblLocalValues
+    Sanitized in 0,001 seconds.
+  tblLocalValues (SQL)
+  tblOrderDetails
+    Sanitized in 0,002 seconds.
+  tblOrderDetails (SQL)
+  tblOrders
+    Sanitized in 0,003 seconds.
+  tblOrders (SQL)
+  tblStores
+    Sanitized in 0,002 seconds.
+  tblStores (SQL)
+  tblUSStoresXmpl
+    Sanitized in 0,002 seconds.
+  tblUSStoresXmpl (SQL)
+  USStores
+
+-------------------------------------
+ERROR: Unable to access table USStores. Please ensure that this table exists and is accessible in the current database.
+Source: clsDbTableDef.Export
+-------------------------------------
+  zTableFields
+    Sanitized in 0,002 seconds.
+  zTableFields (SQL)
+  ztblDiskValues
+    Sanitized in 0,001 seconds.
+  ztblDiskValues (SQL)
+  ztblNullEntry
+    Sanitized in 0,001 seconds.
+  ztblNullEntry (SQL)
+[17]
+-------------------------------------
+Exporting queries...          
+  qryAuthForCombo
+    Sanitized in 0,003 seconds.
+  qryAuthForCombo (SQL)
+  qryAuthorBooks
+    Sanitized in 0,001 seconds.
+  qryAuthorBooks (SQL)
+  qryAuthorCategories
+    Sanitized in 0,002 seconds.
+  qryAuthorCategories (SQL)
+  qryAuthorsSorted
+    Sanitized in 0,001 seconds.
+  qryAuthorsSorted (SQL)
+  qryBookAuthors
+    Sanitized in 0,001 seconds.
+  qryBookAuthors (SQL)
+  qryBookCategories
+    Sanitized in 0,001 seconds.
+  qryBookCategories (SQL)
+  qryBooksForCombo
+    Sanitized in 0,001 seconds.
+  qryBooksForCombo (SQL)
+  qryBooksSorted
+    Sanitized in 0,001 seconds.
+  qryBooksSorted (SQL)
+  qryCategories
+    Sanitized in 0,001 seconds.
+  qryCategories (SQL)
+  qryCategoriesForCombo
+    Sanitized in 0,001 seconds.
+  qryCategoriesForCombo (SQL)
+  qryCustForCombo
+    Sanitized in 0,002 seconds.
+  qryCustForCombo (SQL)
+  qryCustForSignonCombo
+    Sanitized in 0,001 seconds.
+  qryCustForSignonCombo (SQL)
+  qryCustomerSorted
+    Sanitized in 0,001 seconds.
+  qryCustomerSorted (SQL)
+  qryCustOrderDetails
+    Sanitized in 0,002 seconds.
+  qryCustOrderDetails (SQL)
+  qryOrderBooks
+    Sanitized in 0,001 seconds.
+  qryOrderBooks (SQL)
+  qryOrderReport
+    Sanitized in 0,002 seconds.
+  qryOrderReport (SQL)
+  qryOrdersSorted
+    Sanitized in 0,002 seconds.
+  qryOrdersSorted (SQL)
+  qryStores
+    Sanitized in 0,001 seconds.
+  qryStores (SQL)
+  qryStoresForCombo
+    Sanitized in 0,001 seconds.
+  qryStoresForCombo (SQL)
+  qryStoresForComboWNull
+    Sanitized in 0,001 seconds.
+  qryStoresForComboWNull (SQL)
+  qryStoresSorted
+    Sanitized in 0,001 seconds.
+  qryStoresSorted (SQL)
+[21]
+-------------------------------------
+Exporting forms...            
+  frmStoreSearch
+    Sanitized in 0,009 seconds.
+  frmBookSearch
+    Sanitized in 0,011 seconds.
+  zfrmSellBooks
+    Sanitized in 0,007 seconds.
+  frmAbout
+    Sanitized in 0,002 seconds.
+  frmAuthorList
+    Sanitized in 0,005 seconds.
+  frmAuthorAdd
+    Sanitized in 0,008 seconds.
+  frmStorePrintParms
+    Sanitized in 0,006 seconds.
+  frmBooksPlain
+    Sanitized in 0,013 seconds.
+  frmBookPrintParms
+    Sanitized in 0,008 seconds.
+  frmAuthors
+    Sanitized in 0,010 seconds.
+  frmAuthorSearch
+    Sanitized in 0,008 seconds.
+  frmAuthorSummary
+    Sanitized in 0,006 seconds.
+  frmBookList
+    Sanitized in 0,004 seconds.
+  fsubOrderBooks
+    Sanitized in 0,007 seconds.
+  frmBooks
+    Sanitized in 0,014 seconds.
+  frmMain
+    Sanitized in 0,006 seconds.
+  frmBookSalesParm
+    Sanitized in 0,012 seconds.
+  frmStoreSummary
+    Sanitized in 0,007 seconds.
+  frmBookSummary
+    Sanitized in 0,009 seconds.
+  frmCategoryAdd
+    Sanitized in 0,005 seconds.
+  frmStores
+    Sanitized in 0,011 seconds.
+  frmCustomers
+    Sanitized in 0,014 seconds.
+  frmCopyright
+    Sanitized in 0,002 seconds.
+  frmCustAdd
+    Sanitized in 0,011 seconds.
+  frmCustPrintParms
+    Sanitized in 0,007 seconds.
+  frmSignOn
+    Sanitized in 0,005 seconds.
+  frmCustSalesParm
+    Sanitized in 0,009 seconds.
+  frmCustSearch
+    Sanitized in 0,008 seconds.
+  fsubBookAuthors
+    Sanitized in 0,004 seconds.
+  frmOrderOptions
+    Sanitized in 0,008 seconds.
+  frmOrderPrintParms
+    Sanitized in 0,005 seconds.
+  frmOrders
+    Sanitized in 0,015 seconds.
+  fsubAuthorBooks
+    Sanitized in 0,006 seconds.
+  frmReports
+    Sanitized in 0,005 seconds.
+  frmStoreList
+    Sanitized in 0,004 seconds.
+  fsubBookAuthors2
+    Sanitized in 0,005 seconds.
+  fsubBookCategories
+    Sanitized in 0,006 seconds.
+  fsubBookCategories2
+    Sanitized in 0,004 seconds.
+  zfrmTemplate
+    Sanitized in 0,008 seconds.
+[39]
+-------------------------------------
+Exporting macros...           
+  AutoKeys
+    Sanitized in 0,000 seconds.
+[1]
+-------------------------------------
+Exporting reports...          
+  rsubBookCategories
+    Sanitized in 0,002 seconds.
+  rptAuthors
+    Sanitized in 0,008 seconds.
+  rptOrders
+    Sanitized in 0,015 seconds.
+  rsubBookAuthors
+    Sanitized in 0,001 seconds.
+  rptStoreLabels
+    Sanitized in 0,002 seconds.
+  rsubAuthorBooks
+    Sanitized in 0,002 seconds.
+  rptStores
+    Sanitized in 0,006 seconds.
+  rptCustomers
+    Sanitized in 0,007 seconds.
+  rptCustSales
+    Sanitized in 0,017 seconds.
+  rptCustLabels
+    Sanitized in 0,003 seconds.
+  rptCustEnvelope
+    Sanitized in 0,003 seconds.
+  rptBookSales
+    Sanitized in 0,017 seconds.
+  rptBooks
+    Sanitized in 0,014 seconds.
+[13]
+-------------------------------------
+Exporting relations...        
+  {47D921AF-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B0-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B1-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B2-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B3-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B4-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B5-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B6-9F09-11D2-99E8-A76583F5D36C}
+  {47D921B7-9F09-11D2-99E8-A76583F5D36C}
+[9]
+-------------------------------------
+Exporting doc properties...   
+  Database Documents
+[77]
+-------------------------------------
+Exporting nav pane groups...  
+  Groups
+[1]
+-------------------------------------
+Exporting hidden attributes...
+  Database hidden attributes
+[1]
+-------------------------------------
+Done. (16,78 seconds)
+
+--------------------------------------------------
+                PERFORMANCE REPORTS
+--------------------------------------------------
+Category                      Count     Seconds
+--------------------------------------------------
+CommandBars                   3         10,62
+Forms                         39        1,70
+Tables                        17        0,80
+Doc Properties                77        0,78
+Queries                       21        0,67
+Reports                       13        0,58
+DB Properties                 46        0,22
+Modules                       7         0,21
+Relations                     9         0,16
+Project                       1         0,13
+Nav Pane Groups               1         0,09
+VBE References                4         0,07
+Hidden Attributes             1         0,07
+Proj Properties               1         0,07
+Macros                        1         0,06
+IMEX Specs                    1         0,06
+VB Project                    1         0,06
+DB Connections                0         0,03
+Table Data Macros             0         0,01
+Shared Images                 0         0,00
+Themes                        0         0,00
+Table Data                    0         0,00
+VBE Forms                     0         0,00
+Saved Specs                   0         0,00
+--------------------------------------------------
+TOTALS:                       243       16,40
+--------------------------------------------------
+
+--------------------------------------------------
+Operations                    Count     Seconds
+--------------------------------------------------
+Save CommandBar Images        3         2,96
+Convert to JSON               6856      1,27
+Increment Progress            238       1,04
+App.SaveAsText()              74        0,51
+Scan DB Objects               1         0,48
+Sanitize File                 74        0,42
+Console Updates               10        0,38
+Write File                    213       0,17
+Format SQL                    21        0,17
+App.ExportXML()               16        0,13
+modFileAccess.VerifyPath      306       0,09
+Get File Property Hash        118       0,09
+Read File Bytes               97        0,08
+Delete File                   98        0,06
+Compute SHA256                348       0,05
+Save Table SQL                16        0,05
+Get Modified Date             230       0,04
+Export VBE Module             7         0,04
+Read File                     97        0,04
+Read File DevMode             52        0,04
+Get VBA Hash                  59        0,03
+Save Query SQL                21        0,03
+Check for linked table        17        0,02
+Sanitize VBA Code             51        0,02
+Format XML                    16        0,02
+Sanitize XML                  16        0,01
+Quick Count Files             1         0,01
+Quick Count Objects           1         0,01
+Close Open Objects            1         0,00
+Clear Files by Ext            6         0,00
+modFileAccess.GetUncPath      4         0,00
+--------------------------------------------------
+Other Operations                        8,55
+--------------------------------------------------
+
+

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tblOrderDetails" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="generated" type="xsd:dateTime"></xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="tblOrderDetails">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <od:index index-name="ISBNNumber" index-key="ISBNNumber " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="OrderID" index-key="OrderID " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="PrimaryKey" index-key="OrderID ISBNNumber " primary="yes" unique="yes" clustered="no" order="asc asc"></od:index>
+        <od:tableProperty name="Orientation" type="2" value="0"></od:tableProperty>
+        <od:tableProperty name="OrderByOn" type="1" value="0"></od:tableProperty>
+        <od:tableProperty name="Description" type="10" value="Orders and Books linking table"></od:tableProperty>
+        <od:tableProperty name="ValidationRule" type="12" value="IIf([Quantity]&lt;5,[Discount]=0,IIf([Quantity]&lt;11,[Discount]&lt;=0.05,IIf([Quantity]&lt;21,[Discount]&lt;=0.1,True)))"></od:tableProperty>
+        <od:tableProperty name="ValidationText" type="10" value="No discount allowed for Quantity &lt; 5, discount can't be greater than 10% if quantity is less than 11, and discount can't be greater than 10% if quantity &lt; 21."></od:tableProperty>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="OrderID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Order ID for this item"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="Order ID"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="ISBNNumber" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1620"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="International Standard Book Number"></od:fieldProperty>
+              <od:fieldProperty name="InputMask" type="10" value="0\-00000\-000\-0;0;_"></od:fieldProperty>
+              <od:fieldProperty name="Caption" type="12" value="ISBN Number"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="111"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="RowSourceType" type="10" value="Table/Query"></od:fieldProperty>
+              <od:fieldProperty name="RowSource" type="12" value="qryBooksForCombo"></od:fieldProperty>
+              <od:fieldProperty name="BoundColumn" type="3" value="1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnCount" type="3" value="3"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHeads" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidths" type="10" value="1296;3744;360"></od:fieldProperty>
+              <od:fieldProperty name="ListRows" type="3" value="8"></od:fieldProperty>
+              <od:fieldProperty name="ListWidth" type="10" value="5760twip"></od:fieldProperty>
+              <od:fieldProperty name="LimitToList" type="1" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="13"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Quantity" minOccurs="0" od:jetType="integer" od:sqlSType="smallint" type="xsd:short">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Quantity in this order"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Discount" minOccurs="0" od:jetType="decimal" od:sqlSType="decimal">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Possible discount % when ordering multiple copies (not all stores offer discounts)"></od:fieldProperty>
+              <od:fieldProperty name="Format" type="10" value="Percent"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ValidationRule" type="12" value="&lt;0.21"></od:fieldProperty>
+              <od:fieldProperty name="ValidationText" type="10" value="You can't set a discount greater that 20%!"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:totalDigits value="6"></xsd:totalDigits>
+              <xsd:fractionDigits value="2"></xsd:fractionDigits>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
